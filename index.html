@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"-->
+    <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+
+    <title>CoolLauncher</title>
+    <script>
+      // const {BrowserWindow, app} = require('electron').remote;
+      const { ipcRenderer } = require('electron');
+      const ping = require('ping');
+
+      const ohyeah = () => {
+        var audio = new Audio('OhYeah2.mp3');
+        audio.play();
+      }
+
+      const joinServer = () => {
+        ohyeah();
+        ipcRenderer.send('join', document.getElementById("hidden_address").value);
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #cccccc;
+        background-image: url("new_bg_full2.jpg");
+        /* background-image: url("new_bg_alt.jpg"); */
+        /* background-size: cover; */
+      }
+      input[type=text] {
+        color: black;
+      }
+      span {
+        position: absolute; 
+        /* background-color: yellow; */
+        /* opacity: .5; */
+        font-family: monospace;
+        color: #00ff00;
+        user-select: none;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 40px;
+      }
+      .hover:hover {
+        transform: scale(1.1) rotate(3deg);
+        transition: transform .2s ease-in-out;
+        /* filter: drop-shadow(0px 0px 5px rgb(0, 204, 255)); */
+        /* border: 5px solid red; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+    <br /> -->
+    <!-- <textarea name="" id="textarea" cols="30" rows="10"></textarea><br /> -->
+    <!-- <span id="serverlist"></span><br /> -->
+    <span id="output_name" style="left:49px; top:250px; width:519px; height: 75px; line-height:75px;"></span>
+    <span id="output_map" style="left:45px; top:396px; width: 319px; height: 77px;line-height:77px;"></span>
+    <span id="output_players" style="left: 391px; top:401px; width: 267px; height: 72px;line-height:72px;"></span>
+    <span id="output_ping" style="left: 733px; top:405px; width:228px; height: 68px;line-height:68px;"></span>
+
+    <input type="hidden" value="" id="hidden_players" />
+    <input type="hidden" value="" id="hidden_maxplayers" />
+    <input type="hidden" value="" id="hidden_address" />
+
+    <!-- <button id="refresh">Refresh</button><br /> -->
+    <!-- <button id="button_join" value="" onclick="joinServer();" disabled="true">Join</button><br /> -->
+    <!-- <button id="button_autojoin" value="">Activate Auto-Join</button><br /> -->
+
+    <img src="coollauncher_gif.gif" class="" style="position:absolute; left:22px;top:58px;"/>
+
+    <img src="coolguy2.png" class="hover" onmouseover="ohyeah()" style="position:absolute; left:610px;top:70px;"/>
+
+    <img src="nicepingbrolol_small.png" id="nicepingbro" style="position:absolute; z-index: 1000; left:750px;top:375px; display:none;"/>
+
+    <img src="button_new_refresh.png" class="" id="img_refresh" style="position:absolute; left:52px; top:590px; width:388px; height:60px; display:block;" />
+    <img src="button_new_join.png" class="" id="img_join" style="position:absolute; left:551px; top:590px; width:388px; height:60px; display:none;" />
+    <img src="button_new_activateautojoin.png" class="" id="img_autojoin" style="position:absolute; left:551px; top:590px; width:388px; height:60px; display:none;" />
+  </body>
+</html>
