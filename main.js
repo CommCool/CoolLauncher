@@ -24,7 +24,7 @@ const createWindow = () => {
   win.setResizable(false);
   win.setMaximizable(false);
   win.setFullScreenable(false);
-  // win.removeMenu();  // comment this out to activate developer console 
+  win.removeMenu();  // comment this out to activate developer console 
 
   win.loadFile('index.html');
 
@@ -56,25 +56,3 @@ ipcMain.on('join', (event, address) => {
         console.log(data.toString());
    });
 })
-
-/*
-word around the office is you got a high ping
-
-nice ping bro lol
-
-song: paragonx9 - infiltration
-the missile knows where it is
-
-power on
-key authorization
-switch safe to armed
-launch
-
-low orbit ion cannon ddos app lookalike
-
-Lock on
-Load
-Target acquired
-
-radar scan
-*/
