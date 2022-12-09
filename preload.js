@@ -118,6 +118,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         ping.promise.probe(server.IP)
         .then(function (res) {
+          console.log(res);
+          console.log(res.time);
           output_ping.innerHTML = res.time;
           if (res.time >= 100) {
             nicepingbro.style.display = "block";
@@ -135,7 +137,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     };
-    xhttp.open("GET", "https://serverlist.ren-x.com/servers.jsp?id=launcher", true);
+    // xhttp.open("GET", "https://serverlist.ren-x.com/servers.jsp?id=launcher", true);
+    xhttp.open("GET", "https://serverlist-rx.totemarts.services/servers.jsp", true);
     // xhttp.setRequestHeader("User-Agent", "RenX-Launcher (0.87)");
     xhttp.send();
   }

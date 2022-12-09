@@ -10,8 +10,8 @@
   "author": "CommanderCool",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^19.0.4",
-    "electron-packager": "^15.5.1",
+    "electron": "^22.0.0",
+    "electron-packager": "^17.1.1",
     "ping": "^0.4.2"
   },
   "dependencies": {
