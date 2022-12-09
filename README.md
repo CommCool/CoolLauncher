@@ -26,6 +26,11 @@ If you are uncomfortable with launching random .exe files anyway, you can:
 
 - The Cool Launcher logo is now animated.
 
+## v0.2
+
+- Cool Guy's Shades are now tinted a cool orange
+- Updated deprecated realm list url
+
 ## Assets
 
-All art assets are CC0 except for the cool emoji (coolguy2.png) which is created by TheDigitalArtist and published under the Pixabay License [https://pixabay.com/illustrations/emoticon-emoji-smile-face-icon-1610518/](https://pixabay.com/illustrations/emoticon-emoji-smile-face-icon-1610518/).
+All art and sound assets are CC0 except for the cool emoji (coolguy2.png) which is created by TheDigitalArtist and published under the Pixabay License [https://pixabay.com/illustrations/emoticon-emoji-smile-face-icon-1610518/](https://pixabay.com/illustrations/emoticon-emoji-smile-face-icon-1610518/).
